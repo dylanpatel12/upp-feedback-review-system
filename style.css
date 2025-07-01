@@ -1,0 +1,130 @@
+/* Background slider styles */
+#background-slider {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+}
+
+.background-slide.visible {
+  opacity: 1;
+}
+
+/* Feedback container on top */
+.feedback-container {
+  position: relative;
+  z-index: 10;
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  color: #333;
+}
+
+/* Headings */
+.feedback-container h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Form styles */
+.feedback-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feedback-container input[type="text"],
+.feedback-container input[type="email"],
+.feedback-container textarea {
+  width: 80%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  border: 1.5px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-container input[type="text"]:focus,
+.feedback-container input[type="email"]:focus,
+.feedback-container textarea:focus {
+  border-color: #3366cc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(51, 102, 204, 0.4);
+}
+
+/* Textarea styles */
+.feedback-container textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Button */
+.feedback-container button {
+  padding: 12px 28px;
+  background-color: #3366cc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-container button:hover {
+  background-color: #264d99;
+}
+
+/* Success message */
+#success-message {
+  margin-top: 15px;
+  font-weight: 600;
+  color: green;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.reload-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -15px;px;
+  left: 10px;
+  z-index: 20;
+}
+
+.reload-button img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+
+
+

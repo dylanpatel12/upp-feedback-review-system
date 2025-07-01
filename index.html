@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UPP Architectural Stay Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background slider container -->
+  <div id="background-slider">
+    <div id="background-slide0" class="background-slide"></div>
+    <div id="background-slide1" class="background-slide"></div>
+    <div id="background-slide2" class="background-slide"></div>
+  </div>
+
+
+    <!-- Reload Button with Image -->
+    <button id="reload-btn" class="reload-button" title="Reload the page">
+    <img src="images/upp-logo.png" alt="UPP Logo" class="logo-button" onclick="location.reload();" />
+
+    </button>
+
+
+  <!-- Feedback form container -->
+  <div class="feedback-container">
+    <h2>UPP Architectural Stay Reviews</h2>
+    <form id="feedback-form">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+
+      <label for="message">Feedback *</label>
+      <textarea id="message" name="message" placeholder="Your feedback here..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="success-message" style="display:none;">Thank you for your feedback!</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
