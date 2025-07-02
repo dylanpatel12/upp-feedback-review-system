@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 5s ease-in-out;
+  transition: opacity 2.5s ease-in-out;
 }
 
 .background-slide.visible {
@@ -115,14 +115,14 @@
   padding: 0;
   cursor: pointer;
   position: absolute;
-  top: 3px;
-  left: 7px;
+  top: 6px;
+  left: 10px;
   z-index: 20;
 }
 
 .reload-button img {
-  width: 119px;
-  height: 46px;
+  width: 150px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -131,7 +131,7 @@
 .page-footer {
   position: fixed;
   width: 100%;
-  height: 60px;             /* thickness of the header */
+  height: 75px;             /* thickness of the header */
   background-color: #dfe0dd;
   z-index: 9999;
 }
@@ -151,4 +151,37 @@
 body {
   padding-top: 60px;      /* space for fixed header */
   padding-bottom: 60px;   /* space for fixed footer */
+}
+
+
+/* Star Rating Styles */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding: 0 10px;
+  margin-bottom: 18px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
 }
