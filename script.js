@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     // Background slider
     (function changeBg() {
         var img_array = [
@@ -9,11 +8,17 @@ $(document).ready(function () {
             "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/1724844745485-D3SCGOQN6QKF807BMQ13/1338_BridgeStudios_FrontElevation_Final+%281%29-01.jpg?format=2500w",
             "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/823ee865-3b85-46b1-8bbe-7d82053cb2f4/Visual+Exterior+-+Revision2.jpg?format=2500w"
         ];
-    
-        var _curIndex = 0,
-            _nxtIndex = 1,
-            interval = 15000;
 
+        var _curIndex = 0;
+        var interval = 6500;
+
+        // Preload all images
+        img_array.forEach(function (src) {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Initialize background divs
         for (var i = 0; i < img_array.length; i++) {
             $('#background-slide' + i).css('background-image', 'url(' + img_array[i] + ')');
         }
@@ -21,29 +26,27 @@ $(document).ready(function () {
         $('#background-slide0').addClass('visible');
 
         function runSlider() {
+            var _nxtIndex = (_curIndex + 1) % img_array.length;
+
             $('#background-slide' + _curIndex).removeClass('visible');
             $('#background-slide' + _nxtIndex).addClass('visible');
 
             _curIndex = _nxtIndex;
-            _nxtIndex = (_nxtIndex + 1) % img_array.length;
         }
 
-        setInterval(runSlider, interval + 5000);
-        setTimeout(runSlider, interval);
+        // Start loop (no delay, runs every 15s forever)
+        setInterval(runSlider, interval);
     })();
 
-
-
+    // Reload button handler
     $('#reload-btn').on('click', function () {
-    location.reload();
+        location.reload();
     });
 
-
-    // Feedback form submit handler with basic validation
+    // Feedback form submit handler
     $('#feedback-form').on('submit', function (e) {
         e.preventDefault();
 
-        // Simple client-side validation (HTML5 does some already)
         var name = $('#name').val().trim();
         var email = $('#email').val().trim();
         var message = $('#message').val().trim();
@@ -53,20 +56,15 @@ $(document).ready(function () {
             return;
         }
 
-        // Basic email format check (simple regex)
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             alert('Please enter a valid email address.');
             return;
         }
 
-        // In a real scenario, here you would send the data to a server with AJAX
-
-        // Show success message and reset form
         $('#success-message').fadeIn();
         $('#feedback-form')[0].reset();
 
-        // Hide message after 5 seconds
         setTimeout(function () {
             $('#success-message').fadeOut();
         }, 5000);
