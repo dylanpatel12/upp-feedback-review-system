@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UPP Architectural Stay Reviews</title>
+  <title>UPP Architectural Service Reviews</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,17 +24,27 @@
 
   <!-- Feedback form container -->
   <div class="feedback-container">
-    <h2>UPP Architectural Stay Reviews</h2>
+    <h2>UPP Architectural & Planning Service Reviews</h2>
     <form id="feedback-form">
 
       <!-- Name & Email -->
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" />
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" />
 
-      <!-- Star Rating -->
+      <!-- Service type dropdown -->
+      <label for="service">Which service did you receive? *</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="planning-consultancy">Planning Consultancy</option>
+        <option value="architectural-design">Architectural Design</option>
+        <option value="project-management">Project Management</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Overall rating -->
       <label for="rating">Overall Rating *</label>
       <div class="star-rating">
         <input type="radio" id="star5" name="rating" value="5" required />
@@ -53,28 +63,49 @@
         <label for="star1">★</label>
       </div>
 
-      <!-- Location dropdown -->
-      <label for="location">Which UPP location did you visit? *</label>
-      <select id="location" name="location" required>
-        <option value="" disabled selected>Select location</option>
-        <option value="london-hub">London Hub</option>
-        <option value="manchester-design-centre">Manchester Design Centre</option>
-        <option value="bristol-atelier">Bristol Atelier</option>
-        <option value="edinburgh-studio">Edinburgh Studio</option>
+      <!-- Specific rating questions -->
+      <label for="speed">Speed & Responsiveness</label>
+      <select id="speed" name="speed" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Good</option>
+        <option value="3">Average</option>
+        <option value="2">Poor</option>
+        <option value="1">Very Poor</option>
       </select>
 
-      <!-- Stay duration dropdown -->
-      <label for="duration">How long was your stay?</label>
-      <select id="duration" name="duration">
-        <option value="" disabled selected>Select duration</option>
-        <option value="1-day">1 day</option>
-        <option value="2-3-days">2–3 days</option>
-        <option value="1-week">1 week</option>
-        <option value="more-than-week">More than a week</option>
+      <label for="expertise">Expertise & Knowledge</label>
+      <select id="expertise" name="expertise" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Good</option>
+        <option value="3">Average</option>
+        <option value="2">Poor</option>
+        <option value="1">Very Poor</option>
       </select>
 
-      <!-- Recommendation radio buttons -->
-      <label>Would you recommend us to others?</label>
+      <label for="communication">Communication Clarity</label>
+      <select id="communication" name="communication" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Good</option>
+        <option value="3">Average</option>
+        <option value="2">Poor</option>
+        <option value="1">Very Poor</option>
+      </select>
+
+      <label for="professionalism">Professionalism of Staff</label>
+      <select id="professionalism" name="professionalism" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Good</option>
+        <option value="3">Average</option>
+        <option value="2">Poor</option>
+        <option value="1">Very Poor</option>
+      </select>
+
+      <!-- Recommendation -->
+      <label>Would you recommend UPP to others? *</label>
       <div class="radio-group">
         <input type="radio" id="recommend-yes" name="recommend" value="yes" required />
         <label for="recommend-yes">Yes</label>
@@ -83,32 +114,17 @@
         <label for="recommend-no">No</label>
       </div>
 
-      <!-- Value for money dropdown -->
-      <label for="value">How would you rate the value for money?</label>
-      <select id="value" name="value">
-        <option value="" disabled selected>Select an option</option>
-        <option value="excellent">Excellent</option>
-        <option value="good">Good</option>
-        <option value="average">Average</option>
-        <option value="poor">Poor</option>
-      </select>
+      <!-- Open feedback -->
+      <label for="positive">What did you appreciate most?</label>
+      <textarea id="positive" name="positive" placeholder="Your thoughts here..."></textarea>
 
-      <!-- Photo upload -->
-      <label for="photo">Upload a photo (optional)</label>
-      <input type="file" id="photo" name="photo" accept="image/*" />
-
-      <!-- General feedback textarea -->
-      <label for="message">Your review / feedback *</label>
-      <textarea id="message" name="message" placeholder="Your detailed feedback here..." required></textarea>
-
-      <!-- Improvements textarea -->
-      <label for="improvements">Any improvements you'd suggest?</label>
-      <textarea id="improvements" name="improvements" placeholder="We appreciate your suggestions!"></textarea>
+      <label for="improvements">What could we improve?</label>
+      <textarea id="improvements" name="improvements" placeholder="Suggestions for improvement"></textarea>
 
       <!-- Anonymous checkbox -->
       <label>
         <input type="checkbox" name="anonymous" />
-        Keep my name anonymous
+        Keep my feedback anonymous
       </label>
 
       <!-- Submit button -->
@@ -123,6 +139,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
-  
+
 </body>
 </html>
