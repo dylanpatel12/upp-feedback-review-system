@@ -8,18 +8,18 @@ This project was built during my Year 12 work experience with [Urban Projects & 
 - Live reviews dynamically displayed in an expanding footer.
 - Firebase integration for secure real-time data storage.
 
- 🔧 Technologies Used
+ Technologies Used
 - HTML, CSS, JavaScript
 - Firebase Firestore
 - DOM manipulation & event handling
 - Mobile-first responsive layout
 
-🧠 Skills Demonstrated
+Skills Demonstrated
 - Front-end development
 - Real-time database integration
 - UI/UX design consistency with UPP brand
 - Problem-solving & independent learning
 
 
- 📁 Project Files
+Project Files
 All code was hand-written and version-controlled. No builders (Wix, Webflow, etc.) used.
