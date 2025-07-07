@@ -1,4 +1,4 @@
-# UPP Feedback & Review System 🏗
+# UPP Feedback & Review System 
 
 This project was built during my Year 12 work experience with [Urban Projects & Planning (UPP)](https://www.weareupp.co.uk/).
 
