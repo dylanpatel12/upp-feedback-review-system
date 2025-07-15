@@ -4,9 +4,7 @@ $(document).ready(function () {
         var img_array = [
             "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/1724844740203-UW0ZD1E8MI2JHTVH5ISF/03_R03+-+Synagogue+Exterior_A4-01.jpg?format=2500w",
             "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/5ec5065a-f62d-41dc-92dd-11a4f6014854/24002_202_Hotel.jpeg?format=2500w",
-            "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/3317aa69-42bd-4b73-8991-80593f742384/47NL-2.jpg?format=2500w",
-            "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/1724844745485-D3SCGOQN6QKF807BMQ13/1338_BridgeStudios_FrontElevation_Final+%281%29-01.jpg?format=2500w",
-            "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/823ee865-3b85-46b1-8bbe-7d82053cb2f4/Visual+Exterior+-+Revision2.jpg?format=2500w"
+            "https://images.squarespace-cdn.com/content/v1/66cf0abe069efa03ec21da90/1724844745485-D3SCGOQN6QKF807BMQ13/1338_BridgeStudios_FrontElevation_Final+%281%29-01.jpg?format=2500w"
         ];
 
         var _curIndex = 0;
