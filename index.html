@@ -15,10 +15,13 @@
     <div id="background-slide2" class="background-slide"></div>
     <div id="background-slide3" class="background-slide"></div>
     <div id="background-slide4" class="background-slide"></div>
+    <div id="background-slide5" class="background-slide"></div>
+    <div id="background-slide6" class="background-slide"></div>
+
   </div>
 
+  <!-- Header with Logo -->
   <div class="page-header">
-    <!-- Reload Button with Image -->
     <button id="reload-btn" class="reload-button" title="Reload the page">
       <img src="images/upp-logo.png" alt="UPP Logo" class="logo-button" onclick="location.reload();" />
     </button>
@@ -26,7 +29,7 @@
 
   <!-- Feedback form container -->
   <div class="feedback-container">
-    <h2>UPP Architectural & Planning Service Reviews</h2>
+    <h2>UPP Architects + Town Planners Reviews</h2>
     <form id="feedback-form">
 
       <!-- Name & Email -->
@@ -51,16 +54,12 @@
       <div class="star-rating">
         <input type="radio" id="star5" name="rating" value="5" required />
         <label for="star5">★</label>
-
         <input type="radio" id="star4" name="rating" value="4" />
         <label for="star4">★</label>
-
         <input type="radio" id="star3" name="rating" value="3" />
         <label for="star3">★</label>
-
         <input type="radio" id="star2" name="rating" value="2" />
         <label for="star2">★</label>
-
         <input type="radio" id="star1" name="rating" value="1" />
         <label for="star1">★</label>
       </div>
@@ -135,10 +134,33 @@
     </form>
 
     <div id="success-message" style="display:none;">Thank you for your feedback!</div>
+
+    <!-- Static Reviews Section -->
+    <div class="reviews-section">
+      <h2>What Our Clients Say</h2>
+
+      <div class="review-card">
+        <p class="review-text">
+          "Through and fast planning consultants are a hard find. UPP are amazing at speed of response, very knowledgeable in town planning and technical details, available for quick calls and meetings as needed. Having worked with Motti and Emily and interactions with other team members you see consistency in company culture of speedy responses, clear communication and great work ethic throughout. Suited for small to medium sized developments, I would recommend them if you are after dynamic young and energetic design and planning team."
+        </p>
+        <p class="review-author">– Rajpal Singh</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">
+          "Having had challenges with our planning applications to Barnet, that were submitted via another architecture company we approached UPP for independent advice and Emily supported us to put in a new application and to challenge the existing ones. Emily has a wealth of knowledge and we are delighted to say that thanks to her support we ultimately got the plans we wanted. We only wish we had used UPP from the start and can only say positive things about our experience."
+        </p>
+        <p class="review-author">– Simon P</p>
+      </div>
+
+      <p class="more-reviews">...and many more 5-star reviews ⭐⭐⭐⭐⭐</p>
+    </div>
   </div>
 
+  <!-- Footer -->
   <div class="page-footer"></div>
 
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
 
